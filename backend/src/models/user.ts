@@ -1,9 +1,6 @@
-// used to represent the user document in mongodb
-
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
-// creating a type for handling forms and for validating data before saving into db document
 export type UserType = {
   _id: string;
   email: string;

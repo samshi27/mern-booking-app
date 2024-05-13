@@ -53,7 +53,7 @@ const Register = () => {
           First Name
           <input
             type="text"
-            className="border rounded w-full py-1 px-2 font-normal"
+            className="border border-gray-300 rounded w-full py-1 px-2 font-normal mt-1"
             {...register("firstName", { required: "This field is required" })}
           />
           {errors.firstName && (
@@ -64,7 +64,7 @@ const Register = () => {
           Last Name
           <input
             type="text"
-            className="border rounded w-full py-1 px-2 font-normal"
+            className="border border-gray-300 rounded w-full py-1 px-2 font-normal mt-1"
             {...register("lastName", { required: "This field is required" })}
           />
           {errors.lastName && (
@@ -76,7 +76,7 @@ const Register = () => {
         Email
         <input
           type="email"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border border-gray-300 rounded w-full py-1 px-2 font-normal mt-1"
           {...register("email", { required: "This field is required" })}
         />
         {errors.email && (
@@ -87,7 +87,7 @@ const Register = () => {
         Password
         <input
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border border-gray-300 rounded w-full py-1 px-2 font-normal mt-1"
           {...register("password", {
             required: "This field is required",
             minLength: {
@@ -104,7 +104,7 @@ const Register = () => {
         Confirm Password
         <input
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border border-gray-300 rounded w-full py-1 px-2 font-normal mt-1"
           {...register("confirmPassword", {
             validate: (val) => {
               if (!val) {
@@ -129,7 +129,7 @@ const Register = () => {
         </span>
         <button
           type="submit"
-          className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-xl"
+          className="bg-blue-600 text-white px-3 py-2 font-bold hover:bg-blue-500 text-xl"
         >
           Create Account
         </button>
