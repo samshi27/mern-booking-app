@@ -18,6 +18,8 @@ export const register = async (formData: RegisterFormData) => {
   if (!response.ok) {
     throw new Error(responseBody.message);
   }
+
+  return responseBody;
 };
 
 export const signIn = async (formData: SignInFormData) => {
@@ -30,11 +32,12 @@ export const signIn = async (formData: SignInFormData) => {
     body: JSON.stringify(formData),
   });
 
-  const body = await response.json();
+  const responseBody = await response.json();
   if (!response.ok) {
-    throw new Error(body.message);
+    throw new Error(responseBody.message);
   }
-  return body;
+
+  return responseBody;
 };
 
 export const validateToken = async () => {
@@ -58,4 +61,18 @@ export const signOut = async () => {
   if (!response.ok) {
     throw new Error("Error during sign out");
   }
+};
+
+export const addMyHotel = async (hotelFormData: FormData) => {
+  const response = await fetch(`${API_BASE_URL}/api/my-hotels`, {
+    method: "POST",
+    credentials: "include",
+    body: hotelFormData,
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to add hotel");
+  }
+
+  return response.json();
 };
