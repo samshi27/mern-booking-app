@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const UI_URL = "http://localhost:5173/";
+const UI_URL = "http://localhost:3000";
 
 // test case for user sign in
 test("should allow user to sign in", async ({ page }) => {
